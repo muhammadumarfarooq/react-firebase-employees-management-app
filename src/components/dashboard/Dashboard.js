@@ -30,6 +30,9 @@ const Dashboard = () => {
 
         setData(employees);
         setLoading(false);
+      })
+      .catch(error => {
+        console.log(error);
       });
   }, []);
   return (

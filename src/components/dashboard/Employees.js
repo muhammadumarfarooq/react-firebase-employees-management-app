@@ -1,5 +1,6 @@
 import React from "react";
 import { Badge } from "reactstrap";
+import { Link } from "react-router-dom";
 
 const Employees = ({ data }) => {
   return (
@@ -13,6 +14,9 @@ const Employees = ({ data }) => {
             <li className='list-group-item' key={employee.id}>
               <Badge color='secondary'>{employee.dept}</Badge>{" "}
               {employee.employee_id}: {employee.name}
+              <Link className='float-right' to={`/${employee.employee_id}`}>
+                <i className='fas fa-eye'></i>
+              </Link>
             </li>
           ))}
         </ul>
