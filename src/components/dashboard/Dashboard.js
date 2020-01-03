@@ -12,6 +12,7 @@ const Dashboard = () => {
   useEffect(() => {
     setLoading(true);
     db.collection("employees")
+      .orderBy("dept")
       .get()
       .then(querySnapshot => {
         const employees = [];
