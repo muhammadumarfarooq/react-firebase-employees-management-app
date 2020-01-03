@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./components/dashboard/Dashboard";
 import EditEmployee from "./components/EditEmployee";
 import NewEmployee from "./components/NewEmployee";
 import ViewEmployee from "./components/viewEmployee";
