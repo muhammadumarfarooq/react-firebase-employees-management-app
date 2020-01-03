@@ -20,15 +20,17 @@ const ViewEmployee = ({ match }) => {
   }, []);
 
   const handleDeleteEmployee = id => {
-    db.collection("employees")
-      .where("employee_id", "==", employee_id)
-      .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
-          doc.ref.delete();
-          history.push("/");
+    if (window.confirm("Are you sure?")) {
+      db.collection("employees")
+        .where("employee_id", "==", employee_id)
+        .get()
+        .then(querySnapshot => {
+          querySnapshot.forEach(doc => {
+            doc.ref.delete();
+            history.push("/");
+          });
         });
-      });
+    }
   };
 
   return employee !== null ? (
