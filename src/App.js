@@ -11,13 +11,14 @@ function App() {
     <Router>
       <div className='App'>
         <TopNavbar />
-
-        <Switch>
-          <Route exact path='/' component={Dashboard} />
-          <Route exact path='/:employee_id' component={ViewEmployee} />
-          <Route exact path='/new' component={NewEmployee} />
-          <Route exact path='/edit/:employee_id' component={EditEmployee} />
-        </Switch>
+        <div className='container'>
+          <Switch>
+            <Route exact path='/' component={Dashboard} />
+            <Route exact path='/:employee_id' component={ViewEmployee} />
+            <Route exact path='/new' component={NewEmployee} />
+            <Route exact path='/edit/:employee_id' component={EditEmployee} />
+          </Switch>
+        </div>
       </div>
     </Router>
   );
