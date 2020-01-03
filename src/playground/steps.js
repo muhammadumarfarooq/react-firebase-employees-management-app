@@ -15,6 +15,8 @@
    
   Basic components Dashboard, editEmployee, addEmployee, newEmployee etc.
 
+  // Fetching data from firestore.
+  
 
 
 */

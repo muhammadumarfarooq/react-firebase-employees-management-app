@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function PlusBtn() {
   return (
     <Link style={style} to='/new' className='btn btn-danger rounded-circle'>
-      <i class='fas fa-plus'></i>
+      <i className='fas fa-plus'></i>
     </Link>
   );
 }
