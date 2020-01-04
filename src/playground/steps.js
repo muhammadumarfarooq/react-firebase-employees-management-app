@@ -16,7 +16,11 @@
   Basic components Dashboard, editEmployee, addEmployee, newEmployee etc.
 
   // Fetching data from firestore.
+  enable authentication
+  make login and register forms
   
+  // *** Firebase Authentication ***
+
 
 
 */

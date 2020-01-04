@@ -40,8 +40,6 @@ const Dashboard = () => {
       <ActionBtn path='/new' icon='plus' />
 
       {isLoading ? <Loader /> : <Employees data={data} />}
-
-      <h3>Dashboard...</h3>
     </div>
   );
 };
