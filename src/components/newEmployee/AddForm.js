@@ -17,16 +17,6 @@ const AddForm = ({ handleSaveToDb }) => {
   return (
     <Form onSubmit={handleSubmit}>
       <FormGroup>
-        <Label for='name'>Name</Label>
-        <Input
-          type='name'
-          name='name'
-          id='name'
-          placeholder='Name'
-          onChange={e => setValue({ ...value, name: e.target.value })}
-        />
-      </FormGroup>
-      <FormGroup>
         <Label for='employeeID'>Employee ID</Label>
 
         <Input
@@ -35,6 +25,18 @@ const AddForm = ({ handleSaveToDb }) => {
           id='employeeID'
           placeholder='ID'
           onChange={e => setValue({ ...value, employee_id: e.target.value })}
+          value={value.employee_id}
+        />
+      </FormGroup>
+      <FormGroup>
+        <Label for='name'>Name</Label>
+        <Input
+          type='name'
+          name='name'
+          id='name'
+          placeholder='Name'
+          value={value.name}
+          onChange={e => setValue({ ...value, name: e.target.value })}
         />
       </FormGroup>
       <FormGroup>
@@ -44,6 +46,7 @@ const AddForm = ({ handleSaveToDb }) => {
           name='dept'
           id='dept'
           placeholder='Department'
+          value={value.dept}
           onChange={e => setValue({ ...value, dept: e.target.value })}
         />
       </FormGroup>
@@ -55,12 +58,13 @@ const AddForm = ({ handleSaveToDb }) => {
           id='pos'
           placeholder='Position'
           onChange={e => setValue({ ...value, position: e.target.value })}
+          value={value.position}
         />
       </FormGroup>
       <Link className='btn btn-danger mr-2' to='/'>
         Cancel
       </Link>
-      <Button>Submit</Button>
+      <Button>Update</Button>
     </Form>
   );
 };
