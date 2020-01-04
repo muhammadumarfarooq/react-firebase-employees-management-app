@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import db from "./firebaseInit";
 import { Link, useHistory } from "react-router-dom";
+import ActionBtn from "./common/ActionBtn";
 
 const ViewEmployee = ({ match }) => {
   const history = useHistory();
@@ -35,6 +36,7 @@ const ViewEmployee = ({ match }) => {
 
   return employee !== null ? (
     <div className='view-employee mt-4'>
+      <ActionBtn path={`/edit/${employee.employee_id}`} icon='edit' />
       <div className='card'>
         <div className='card-header'>
           <h1>{employee.name}</h1>

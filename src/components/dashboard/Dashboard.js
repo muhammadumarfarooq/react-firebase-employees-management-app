@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PlusBtn from "../common/PlusBtn";
+import ActionBtn from "../common/ActionBtn";
 import db from "../firebaseInit";
 import Loader from "../common/Loader";
 import Employees from "./Employees";
@@ -37,7 +37,8 @@ const Dashboard = () => {
   }, []);
   return (
     <div className='dashboard'>
-      <PlusBtn />
+      <ActionBtn path='/new' icon='plus' />
+
       {isLoading ? <Loader /> : <Employees data={data} />}
 
       <h3>Dashboard...</h3>
